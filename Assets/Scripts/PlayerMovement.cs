@@ -9,8 +9,8 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
     Animator animator;
     CapsuleCollider2D playerCollider;
-    
-    bool isOnLader = false;
+
+    float gravityScale;
 
     [SerializeField] float runSpeed;
     [SerializeField] float climbSpeed;
@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         playerCollider = GetComponent<CapsuleCollider2D>();
+        gravityScale = rb.gravityScale;
     }
 
     void Update()
@@ -47,9 +48,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Run()
     {
-        bool isMoving = Mathf.Abs(rb.velocity.x) > Mathf.Epsilon;
         Vector2 runVelocity = new Vector2(moveInput.x * runSpeed, rb.velocity.y) ;
         rb.velocity = runVelocity;
+        bool isMoving = Mathf.Abs(rb.velocity.x) > Mathf.Epsilon;
         animator.SetBool("isRunning", isMoving);  
     }
 
@@ -64,14 +65,17 @@ public class PlayerMovement : MonoBehaviour
 
     void ClimbingLadder()
     {
-        if(!playerCollider.IsTouchingLayers(LayerMask.GetMask("Ladder"))) { return; }
+        if(!playerCollider.IsTouchingLayers(LayerMask.GetMask("Ladder"))) 
+        {
+            animator.SetBool("isClimbing", false);
+            rb.gravityScale = gravityScale;
+            return; 
+        }
 
+        rb.gravityScale = 0f;
         Vector2 climbVelocity = new Vector2(rb.velocity.x, moveInput.y * climbSpeed);
         rb.velocity = climbVelocity;
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        
+        bool isClimbing = Mathf.Abs(rb.velocity.y) > Mathf.Epsilon;
+        animator.SetBool("isClimbing", isClimbing);
     }
 }
