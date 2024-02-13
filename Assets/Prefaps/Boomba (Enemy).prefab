@@ -14,10 +14,10 @@ GameObject:
   - component: {fileID: 4342062254748377686}
   - component: {fileID: 6482035356252138470}
   - component: {fileID: 8269806467979337856}
-  - component: {fileID: 833273642327872200}
+  - component: {fileID: 6474587641586443187}
   m_Layer: 10
   m_Name: Boomba (Enemy)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -169,7 +169,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.40682507, y: -0.26311618}
+  m_Offset: {x: 0.43914986, y: -0.26311618}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -180,7 +180,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.022226334, y: 0.6520635}
+  m_Size: {x: 0.022228241, y: 0.6520635}
   m_EdgeRadius: 0
 --- !u!70 &8269806467979337856
 CapsuleCollider2D:
@@ -217,7 +217,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.004039585, y: 0.0067313625}
   m_Size: {x: 0.76615965, y: 0.6395942}
   m_Direction: 1
---- !u!114 &833273642327872200
+--- !u!114 &6474587641586443187
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -26,4 +26,17 @@ public class EnemyMovement : MonoBehaviour
     {
         transform.localScale = new Vector3(-Mathf.Sign(rb.velocity.x), transform.localScale.y, transform.localScale.z);
     }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag  == "Enemy")
+        {
+            Die();
+        }
+    }
+    void Die()
+    {
+        this.enabled = false;
+        Destroy(gameObject);
+    }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -12,10 +13,13 @@ public class PlayerMovement : MonoBehaviour
     BoxCollider2D feetCollider;
 
     float gravityScale;
+    bool isAlive = true;
 
     [SerializeField] float runSpeed;
     [SerializeField] float climbSpeed;
     [SerializeField] float jumpHeight;
+    [SerializeField] Vector2 death;
+    [SerializeField] ParticleSystem deathVFX;
 
     void Start()
     {
@@ -28,9 +32,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if(!isAlive) { return; }
         Run();
         FlipPlayer();
         ClimbingLadder();
+        Die();
     }
 
     void OnMove(InputValue value)
@@ -40,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
 
     void OnJump(InputValue value)
     {
-        if (!feetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"))) { return; }
+        if (!feetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")) || !isAlive) { return; }
 
         if (value.isPressed)
         {
@@ -79,5 +85,17 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = climbVelocity;
         bool isClimbing = Mathf.Abs(rb.velocity.y) > Mathf.Epsilon;
         animator.SetBool("isClimbing", isClimbing);
+    }
+
+    void Die()
+    {
+        if (playerCollider.IsTouchingLayers(LayerMask.GetMask("Enemy")))
+        {
+            isAlive = false;
+            animator.SetTrigger("Death");
+            rb.velocity = death;
+            deathVFX.Play();
+        }
+
     }
 }
