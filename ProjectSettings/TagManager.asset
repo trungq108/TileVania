@@ -15,8 +15,8 @@ TagManager:
   - Ground
   - Ladder
   - BackGround
-  - 
-  - 
+  - Bouncing
+  - Enemy
   - 
   - 
   - 
@@ -53,6 +53,9 @@ TagManager:
     locked: 0
   - name: Flatform
     uniqueID: 2506314473
+    locked: 0
+  - name: Enemies
+    uniqueID: 3034251423
     locked: 0
   - name: Player
     uniqueID: 3488925487
