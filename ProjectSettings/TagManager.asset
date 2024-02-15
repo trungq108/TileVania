@@ -18,9 +18,9 @@ TagManager:
   - BackGround
   - Bouncing
   - Enemy
-  - 
-  - 
-  - 
+  - Hazards
+  - Bullet
+  - Interacable
   - 
   - 
   - 
@@ -49,11 +49,17 @@ TagManager:
   - name: Water
     uniqueID: 2966182593
     locked: 0
+  - name: Flatform
+    uniqueID: 2506314473
+    locked: 0
   - name: Climbing
     uniqueID: 336899013
     locked: 0
-  - name: Flatform
-    uniqueID: 2506314473
+  - name: Hazards
+    uniqueID: 641035413
+    locked: 0
+  - name: Interacable
+    uniqueID: 1815401485
     locked: 0
   - name: Enemies
     uniqueID: 3034251423

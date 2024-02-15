@@ -5,15 +5,15 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] float moveSpeed;
-    Rigidbody2D rb;
+    Rigidbody2D enemyRb;
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        enemyRb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        rb.velocity = new Vector2(moveSpeed, 0f);
+        enemyRb.velocity = new Vector2(moveSpeed, 0f);
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -24,7 +24,7 @@ public class EnemyMovement : MonoBehaviour
 
     void FlipEnemy()
     {
-        transform.localScale = new Vector3(-Mathf.Sign(rb.velocity.x), transform.localScale.y, transform.localScale.z);
+        transform.localScale = new Vector3(-Mathf.Sign(enemyRb.velocity.x), transform.localScale.y, transform.localScale.z);
     }
 
 }

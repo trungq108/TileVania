@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -44,7 +44,7 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
+  spriteExtrude: 0
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -431,8 +431,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b93c78d667c274b4d85204db53e14f2a
-      internalID: -595928563
+      spriteID: 1f79e0d780bb2a64886efa4589d02c41
+      internalID: 943896829
       vertices: []
       indices: 
       edges: []
@@ -452,8 +452,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2aca7ae8f4309e43809e1528d05dc3c
-      internalID: -1667883120
+      spriteID: f882debcd8986ad49afbaba1811b209f
+      internalID: -1958194357
       vertices: []
       indices: 
       edges: []
@@ -473,8 +473,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bcfc22d51610e374ba58d1dff970d326
-      internalID: -1888572858
+      spriteID: 94ca87ac4b2166b4a8229edc866d03c8
+      internalID: 1723596851
       vertices: []
       indices: 
       edges: []
@@ -494,8 +494,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c5d5d9133b85c54b84847d8bf1011b4
-      internalID: 950694134
+      spriteID: 4e2717c1c927fff4a9a1e3c14c27be41
+      internalID: 2093872270
       vertices: []
       indices: 
       edges: []
@@ -515,8 +515,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e53d6e12d52c89f48860662617064ccc
-      internalID: 158093594
+      spriteID: 8024f096ea5012b46b55c16c735664d3
+      internalID: 1665115503
       vertices: []
       indices: 
       edges: []
@@ -536,8 +536,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab6e6a92b27f5484dbdb73c3e49de22f
-      internalID: 1961074198
+      spriteID: e9700da20f0c7a246a1deaead859ddff
+      internalID: 184987509
       vertices: []
       indices: 
       edges: []
@@ -557,8 +557,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f55f5c8c2297d64f87db2eabe8ed491
-      internalID: 1679139594
+      spriteID: 95d4c8417e8256947896b0d1d1d134e5
+      internalID: 976163140
       vertices: []
       indices: 
       edges: []
@@ -578,8 +578,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5736f18826818648b21570c11ad81e1
-      internalID: 986130771
+      spriteID: 9b7d4056d7482a24ca9258f93765b1c0
+      internalID: 1792405111
       vertices: []
       indices: 
       edges: []
@@ -599,8 +599,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70c16d49999af9c4e98e7d99032de00d
-      internalID: -165241148
+      spriteID: ac11db5d4b4dd6e43934b7a826a522ae
+      internalID: 112437739
       vertices: []
       indices: 
       edges: []
@@ -620,8 +620,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0f0b203570b587408e0b258b482515e
-      internalID: -1971267984
+      spriteID: 651061c6e6144494dbec6346d9c7fc89
+      internalID: 1623604340
       vertices: []
       indices: 
       edges: []
@@ -643,17 +643,17 @@ TextureImporter:
       tilemap-backgrounds_11: 1587962611
       tilemap-backgrounds_12: 1830418791
       tilemap-backgrounds_13: -1111003145
-      tilemap-backgrounds_14: -595928563
-      tilemap-backgrounds_15: -1667883120
-      tilemap-backgrounds_16: -1888572858
-      tilemap-backgrounds_17: 950694134
-      tilemap-backgrounds_18: 158093594
-      tilemap-backgrounds_19: 1961074198
+      tilemap-backgrounds_14: 943896829
+      tilemap-backgrounds_15: -1958194357
+      tilemap-backgrounds_16: 1723596851
+      tilemap-backgrounds_17: 2093872270
+      tilemap-backgrounds_18: 1665115503
+      tilemap-backgrounds_19: 184987509
       tilemap-backgrounds_2: -1801250913
-      tilemap-backgrounds_20: 1679139594
-      tilemap-backgrounds_21: 986130771
-      tilemap-backgrounds_22: -165241148
-      tilemap-backgrounds_23: -1971267984
+      tilemap-backgrounds_20: 976163140
+      tilemap-backgrounds_21: 1792405111
+      tilemap-backgrounds_22: 112437739
+      tilemap-backgrounds_23: 1623604340
       tilemap-backgrounds_3: 205564048
       tilemap-backgrounds_4: 329133270
       tilemap-backgrounds_5: -493289808
