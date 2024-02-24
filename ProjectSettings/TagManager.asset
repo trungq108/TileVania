@@ -43,6 +43,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Sky
+    uniqueID: 2761096083
+    locked: 0
   - name: Background
     uniqueID: 877705283
     locked: 0

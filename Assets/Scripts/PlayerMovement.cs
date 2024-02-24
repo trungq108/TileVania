@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
         Run();
         FlipPlayer();
         ClimbingLadder();
-        Die();
+        StartCoroutine(Die());
     }
 
     void OnMove(InputValue value)
@@ -84,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("isClimbing", isClimbing);
     }
 
-    void Die()
+    IEnumerator Die()
     {
         if (playerCollider.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards")))
         {
@@ -92,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetTrigger("Death");
             playerRb.velocity = new Vector2(-playerRb.velocity.x, 10f);
             deathVFX.Play();
+            yield return new WaitForSeconds(1f);
             FindObjectOfType<GameSession>().PlayerDeathSequence();
         }
     }
